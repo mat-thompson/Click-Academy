@@ -1,0 +1,6 @@
+@each $color, $value in $theme-colors {
+  .bg-soft-#{$color} {
+    color: darken(theme-color($color), 5%);
+    background-color: rgba(theme-color($color), .1);
+  }
+}

@@ -1,0 +1,168 @@
+
+<ul class="sidebar-menu">
+  <li class="sidebar-menu-item{% if slug === 'dashboard' %} active{% endif %}">
+    <a class="sidebar-menu-button" href="{{ home_url }}">
+      <span class="sidebar-menu-icon sidebar-menu-icon--left">
+        <img src="assets/images/icons/05-Audio Books/audio-book-volume-medium.svg" width="18px"/>
+      </span>
+      
+      <span class="sidebar-menu-text">Overview</span>
+    </a>
+  </li>
+</ul>
+
+<div class="sidebar-heading">Student</div>
+
+<div class="sidebar-block p-0">
+  <ul class="sidebar-menu mt-0">
+    <li class="sidebar-menu-item{% if slug === 'student-dashboard' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}student-dashboard.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">star_half</i>
+          <span class="sidebar-menu-text">Dashboard</span>
+        </a>
+      </li>
+    <li class="sidebar-menu-item{% if slug === 'student-courses' %} active{% endif %}">
+      <a class="sidebar-menu-button" href="{{ prefix or '' }}student-courses.html">
+        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">queue_play_next</i>
+        <span class="sidebar-menu-text">Courses</span>
+      </a>
+    </li>
+    <li class="sidebar-menu-item{% if slug === 'student-course-purchase' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}student-course-purchase.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">shopping_cart</i>
+          <span class="sidebar-menu-text">Purchase Course</span>
+        </a>
+      </li>
+    <li class="sidebar-menu-item{% if slug === 'student-lessons' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}student-lessons.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dns</i>
+          <span class="sidebar-menu-text">Browse Lessons</span>
+        </a>
+    </li>
+    <li class="sidebar-menu-item{% if slug === 'student-quiz' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}student-quiz.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">live_help</i>
+          <span class="sidebar-menu-text">Take Quiz</span>
+        </a>
+    </li>
+    <li class="sidebar-menu-item{% if slug === 'student-discussions' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}student-discussions.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">forum</i>
+          <span class="sidebar-menu-text">Discussions</span>
+        </a>
+    </li>
+    <li class="sidebar-menu-item{% if slug === 'edit-account' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}edit-account.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">settings</i>
+          <span class="sidebar-menu-text">Edit Account</span>
+        </a>
+    </li>
+    <li class="sidebar-menu-item{% if slug === 'student-billing' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}student-billing.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">monetization_on</i>
+          <span class="sidebar-menu-text">Billing</span>
+        </a>
+    </li>
+    <li class="sidebar-menu-item{% if slug === 'login' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}login.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">exit_to_app</i>
+          <span class="sidebar-menu-text">Logout</span>
+        </a>
+    </li>
+   
+  </ul>
+</div>
+
+
+<div class="sidebar-heading">Author</div>
+
+<div class="sidebar-block p-0">
+  <ul class="sidebar-menu mt-0">
+    <li class="sidebar-menu-item{% if slug === 'author-dashboard' %} active{% endif %}">
+      <a class="sidebar-menu-button" href="{{ prefix or '' }}author-dashboard.html">
+        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
+        <span class="sidebar-menu-text">Dashboard</span>
+        <span class="badge badge-warning rounded-circle badge-notifications ml-auto">8</span>
+      </a>
+    </li>
+    <li class="sidebar-menu-item{% if slug === 'author-courses' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}author-courses.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">layers</i>
+          <span class="sidebar-menu-text">Courses</span>
+        </a>
+      </li>
+      <li class="sidebar-menu-item{% if slug === 'author-quiz-manager' %} active{% endif %}">
+          <a class="sidebar-menu-button" href="{{ prefix or '' }}author-quiz-manager.html">
+            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">assignment</i>
+            <span class="sidebar-menu-text">Quiz Manager</span>
+          </a>
+        </li>
+        
+    <li class="sidebar-menu-item{% if slug === 'author-earnings' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}author-earnings.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">local_atm</i>
+          <span class="sidebar-menu-text">Earnings</span>
+        </a>
+    </li>
+    <li class="sidebar-menu-item{% if slug === 'author-reports' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}author-reports.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">pie_chart</i>
+          <span class="sidebar-menu-text">Reports</span>
+        </a>
+    </li>
+    
+    <li class="sidebar-menu-item{% if slug === 'author-payout' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}author-payout.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">credit_card</i>
+          <span class="sidebar-menu-text">Payout</span>
+        </a>
+    </li>
+    <li class="sidebar-menu-item{% if slug === 'login' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}login.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">exit_to_app</i>
+          <span class="sidebar-menu-text">Logout</span>
+        </a>
+    </li>
+  </ul>
+</div>
+
+
+<div class="sidebar-heading">Admin</div>
+
+<div class="sidebar-block p-0">
+  <ul class="sidebar-menu mt-0">
+    <li class="sidebar-menu-item{% if slug === 'admin-dashboard' %} active{% endif %}">
+      <a class="sidebar-menu-button" href="{{ prefix or '' }}admin-dashboard.html">
+        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
+        <span class="sidebar-menu-text">Dashboard</span>
+      </a>
+    </li>
+    <li class="sidebar-menu-item{% if slug === 'admin-emails' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}admin-emails.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">email</i>
+          <span class="sidebar-menu-text">Emails</span>
+        </a>
+      </li>
+      <li class="sidebar-menu-item{% if slug === 'admin-chat' %} active{% endif %}">
+          <a class="sidebar-menu-button" href="{{ prefix or '' }}admin-chat.html">
+            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">comment</i>
+            <span class="sidebar-menu-text">Chat</span>
+          </a>
+        </li>
+        
+    <li class="sidebar-menu-item{% if slug === 'admin-tickets' %} active{% endif %}">
+        <a class="sidebar-menu-button" href="{{ prefix or '' }}admin-tickets.html">
+          <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">local_offer</i>
+          <span class="sidebar-menu-text">Tickets</span>
+          <span class="badge badge-warning badge-notifications ml-auto">NEW</span>
+        </a>
+    </li>
+
+    <li class="sidebar-menu-item{% if slug === 'admin-trello' %} active{% endif %}">
+      <a class="sidebar-menu-button" href="{{ prefix or '' }}admin-trello.html">
+        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">touch_app</i>
+        <span class="sidebar-menu-text">Trello</span>
+      </a>
+    </li>  
+  </ul>
+</div>

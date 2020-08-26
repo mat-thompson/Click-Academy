@@ -1,0 +1,77 @@
+.list-group-small > .list-group-item {
+  padding-top: .8125rem;
+  padding-bottom: .8125rem;
+}
+
+.list-lessons {
+  margin-bottom: $bottom-spacing;
+  .list-group-item {
+    // border-left:2px solid transparent;
+    a {
+      font-size: 1rem;
+      color: $body-color;
+      font-weight: 600;
+    }
+    &:hover {
+      background: $body-bg;
+      a { text-decoration: none; color: $primary; }
+    }
+    &.active {
+      background-color: $body-bg !important;
+      border: none;
+      border-left:2px solid $primary;
+      background: none;
+      a {color: $primary; }
+    }
+  }
+}
+
+.list-group {
+  &.list-rankings {
+    .list-group-item {
+      border-left: 0;
+      border-right: 0;
+      &:first-of-type {
+        border-top: 0;
+      }
+      &:last-of-type {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+#course_content {
+  font-size: 1.1rem;
+  line-height:1.5;
+  > p {
+    margin-bottom: $grid-gutter-width;
+  }
+  > h4 {
+    font-weight:bold;
+    font-size: 1.5rem;
+  }
+  > ul {
+    margin: $grid-gutter-width 0;
+    padding-left: 10px;
+    li {
+      display: flex !important;
+      align-items: center !important;
+      list-style:none;
+      &:before {
+        font-family: "Material Icons";
+        font-size: 1.6rem;
+        position: relative;
+        left:-5px;
+        margin-right:6px;
+        color: $primary;
+      }
+      &.chevron:before {
+        content: "\e5cc";
+      }
+      &.confirm:before {
+        content: "\e5ca";
+      }
+      margin: 0 0 $grid-gutter-width/4;
+    }
+  }
+}

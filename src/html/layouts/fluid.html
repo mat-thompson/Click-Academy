@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ title }}</title>
+
+  {% include 'layouts/_header.html' %}
+
+  {% block head %}
+    {% include 'pages/_' + slug + '.head.html' ignore missing %}
+  {% endblock %}
+
+</head>
+<body class="{{ bodyClass or 'layout-fluid layout-sticky-subnav' }}">
+
+  {% set layout = 'fluid' %}
+  {% set prefix = 'fluid-' %}
+  {% set containerClass = 'container-fluid' %}
+  {% set drawerAlign = 'end' %}
+  {% set navbarClass = 'navbar-dark bg-primary pr-0' %}
+  {% set home_url = prefix + 'index.html' %}
+  
+  {% set student_menu = slug === 'student-dashboard' or slug === 'student-series' or slug === 'student-courses' or slug === 'student-course' or slug === 'student-take-course' or slug === 'student-take-quiz' or slug === 'student-billing' or slug === 'student-edit-account' or slug === 'student-profile' %}
+  {% set instructor_menu = slug === 'instructor-dashboard' or slug === 'instructor-courses' or slug === 'instructor-course-edit' or slug === 'instructor-lesson-edit' or slug === 'instructor-create-quiz' or slug === 'instructor-earnings' or slug === 'instructor-profile' or slug === 'instructor-payout' %}
+
+  {% set components_menu = 'ui-' in slug %}
+  {% set apps_menu = 'app-' in slug %}
+  {% set dashboards_menu = slug === 'dashboard' or slug === 'student-dashboard' or slug === 'author-dashboard' %}
+
+  {% include 'layouts/_preloader.html' %}
+
+  <!-- Header Layout -->
+  <div class="mdk-header-layout js-mdk-header-layout">
+
+    <!-- Header -->
+    {% block header %}
+      <div id="header" class="mdk-header bg-dark js-mdk-header m-0" data-fixed>
+        <div class="mdk-header__content">
+          {% block navbar %}
+            {% include 'layouts/_navbar.html' %}
+          {% endblock %}
+        </div>
+      </div>
+    {% endblock %}
+    <!-- // END Header -->
+
+    <!-- Header Layout Content -->
+    <div class="mdk-header-layout__content page">
+
+      {% block page %}
+        {% include 'pages/_' + slug + '.html' ignore missing %}
+      {% endblock %}
+      
+      {% include 'layouts/_footer-content.html' %}
+
+    </div>
+    <!-- // END header-layout__content -->
+
+  </div>
+  <!-- // END header-layout -->
+
+  {% include 'layouts/_drawer.html' %}
+  {% include 'layouts/_drawer.events.html' %}
+  {% include 'layouts/_app-settings.html' %}
+  {% include 'layouts/_footer.html' %}
+
+  {% block footer %}
+    {% include 'pages/_' + slug + '.footer.html' ignore missing %}
+  {% endblock %}
+</body>
+</html>

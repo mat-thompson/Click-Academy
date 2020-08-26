@@ -1,0 +1,52 @@
+<!-- Dragula -->
+<script src="assets/vendor/dragula/dragula.min.js"></script>
+<script src="assets/js/dragula.js"></script>
+
+
+
+
+<script>
+  drake = dragula([document.getElementById('questions_wrapper')],{
+    moves: function (el, container, handle) {
+      return handle.classList.contains('question_handle') || handle.parentNode.classList.contains('question_handle');
+    }
+  });
+  drake.on('drop', function(el, target, source, sibling) {
+    console.log($(el).data('position'));
+    // $.ajax({
+    //   method: "POST",
+    //   url: '/admin/courses/[course_id]/questions/sort',
+    //   data: {
+    //     el: $(el).data('position'),
+    //     sibling: $(sibling).data('position')
+    //   }
+    // })
+    // .done(function( msg ) {
+    //   console.log('works');
+    // });
+  });
+
+  var containers = [
+    document.getElementById('answer_container_1'),
+    document.getElementById('answer_container_2'),
+    document.getElementById('answer_container_3')
+  ]
+  var drake_answers = dragula(containers);
+  drake_answers.on('drop', function(el, target, source, sibling) {
+    
+    // $.ajax({
+    //   method: "POST",
+    //   url: '/admin/courses/[course_id]]/questions/answers/sort',
+    //   data: {
+    //     el: $(el).data('position'),
+    //     sibling: $(sibling).data('position'),
+    //     question_id: $(el).data('question-id')
+    //   }
+    // })
+    // .done(function( msg ) {
+    //   // update/flush position after success
+      
+    // });
+  });
+
+</script>

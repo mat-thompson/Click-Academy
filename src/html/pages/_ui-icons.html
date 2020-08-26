@@ -1,0 +1,21 @@
+{% if 'fluid' in prefix %}<div class="page__header flush-shadow">{% endif %}
+  <div class="{{ containerClass }} page__heading-container">
+    <div class="page__heading d-flex align-items-center justify-content-between">
+      <h1 class="m-0">{{ title }}</h1>
+    </div>
+  </div>
+{% if 'fluid' in prefix %}</div> <!-- // END page__header --> {% endif %}
+
+{% if 'fluid' in prefix %}
+<div class="page__header page__header-nav">
+  <div class="{{ containerClass }} page__container">
+    {% include "layouts/_navbar.secondary.html" %}
+  </div>
+</div>
+{% endif %}
+
+<div class="{{ containerClass }} page__container">
+  <div id="app-icons">
+    <app-icons-app></app-icons-app>
+  </div>
+</div>
